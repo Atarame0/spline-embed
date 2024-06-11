@@ -1,0 +1,55 @@
+{
+  "name": "combined-scenes",
+  "version": "1.0.0",
+  "description": "Combined scenes exported with Spline",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^13.0.2"
+  },
+  "scenes": [
+    {
+      "name": "תכירו-את-האירדוק-copy",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    },
+    {
+      "name": "untitled",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    }, 
+    {
+      "name": "last-edit-without-light",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    },
+    {
+      "name": "תכירו-את-האירדוק-ילדים",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    },
+    {
+      "name": "kids-eardoc",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    },
+    {
+      "name": "adults-eardoc-copy-copy",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    },
+    {
+      "name": "flighters-eardoc",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    }
+    ,
+    {
+      "name": "swimmers-eardoc-copy",
+      "version": "1.0.0",
+      "description": "Scene exported with Spline"
+    }
+  ]
+}
+

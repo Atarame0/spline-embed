@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>EardocLearn-Flighters</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/javascript.js"></script>
+
+<!-- spline -->
+<!-- Remove this when import maps will be widely supported -->
+<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script> 
+<script type="importmap">
+    {
+      "imports": {
+        "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.4.0/build/runtime.js"
+      }
+    }
+  </script>
+  
+  <!-- Module script tags -->
+  <script type="module" src="./src/main.js"></script>
+  
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+ 
+ 
+</head>
+
+<body>
+    
+  
+
+
+        <nav>
+            <button id="nav-button" class="btn-mobile hide" onclick="toggleNavBar()">&#9776;</button>
+            <div id="mobile-nav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="toggleNavBar()">&times;</a>
+                <a href="./swimmers.html">שחיינים</a>
+                <a href="./adult.html">מבוגרים</a>
+                <a href="./doctorPage.html">רופאים</a>
+                <a href="./travlerPage.html">טסים</a>
+                <a href="./kidsPage.html">ילדים</a>
+            </div>
+        
+            <ul id="main-nav" class="flex-container-nav hide-mobile">
+                <li><a href="./Homepage.html"><img src="images/Eardoclogo.png" alt="EardocLogo" style="width: 110%;"></a></li>
+                <li><a href="./swimmers.html">שחיינים</a></li>
+                <li><a href="./adult.html">מבוגרים</a></li>
+                <li><a href="./doctorPage.html">רופאים</a></li>
+                <li  class="chosenCat-nav"><a href="./travlerPage.html" style="color: white;">טסים</a></li>
+                <li><a href="./kidsPage.html">ילדים</a></li>
+            </ul>
+        </nav>
+
+ <main>
+   
+    <ul class="flex-container-opening-flighters"> 
+        <li>
+            <h1 style="color: orange;">
+אני טס/ה
+            </h1>
+           <p>
+            יש לך לחץ באוזניים בזמן טיסות? את/ה לא לבד! תופעה זו נפוצה אצל טסים מתמידים, ויכולה להשפיע משמעותית על חווית הטיסה שלך. אנחנו ממליצים לך ללמוד איך להשתמש באירדוק, שיפחית לך את הלחץ באוזניים  בטיסות.           </p>                 
+        </li>
+        
+        <li >
+            <img src="images/travlerCat.png" alt="טסה.ה" class="chosenCat-image" style="position: relative; right: 13%;padding-left: 5%;">
+        </li>
+    </ul>     
+
+
+
+
+    <div class="flighters-opening-section">
+
+        <ul>
+
+            <li>
+                <img src="images/travel-infp-bg.png" alt=" מידע לילדים" class="flighters-opening-section-icon" >
+
+            </li>
+            <li>
+                <h2 style="color: orange;">לחץ באוזניים בטיסות  </h2>
+                <p>
+                    תחושת לחץ באוזניים במהלך טיסה נוצרת בעיקר בהמראה ובנחיתה, כתוצאה מהפרש הלחצים בין האוויר הסביבתי לאוויר הכלוא בחלל האוזן התיכונה.                </p>
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
+
+
+    
+<br>
+
+
+
+<div class="viewer-container">
+    <h2 style="color: orange;">תכירו את האירדוק</h2>
+    <p>
+        תוכלו לסובב את המכשיר וללחוץ על הנקודות השונות
+        כדי להכיר את מבנה האירדוק
+    </p>
+    
+    <canvas id="canvas3d"></canvas>
+</div>
+
+
+<br>
+
+
+
+<h2 style="text-align: center; color: orange;">כעת נלמד איך לתפעל את האירדוק צעד אחר צעד</h2>
+<br>
+<div class="viewer-container-Flighters">
+    <canvas id="canvas3d-7"></canvas>
+</div>
+
+
+<br>
+
+  <!-- Module script tags -->
+  <script type="module" src="./src/main.js"></script>
+ </main>
+
+
+
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">מי אני</h2>
+                <ul class="nav__ul">
+                    <li><a href="./doctorPage.html">רופא/ה</a></li>
+                    <li><a href="./kidsPage.html">ילד/ה</a></li>
+                    <li><a href="./swimmers.html"> שחייני/ת</a></li>
+                    <li><a href="./travlerPage.html"> טס/ה</a></li>
+                    <li><a href="./adult.html">מבוגר/ת</a></li>
+                </ul>
+            </li>
+    
+            <li class="nav__item">
+                <h2 class="nav__title">זאת ועוד</h2>
+                <ul class="nav__ul">
+                    <li><a href="./doctorPage.html">מידע נוסף</a></li>
+                    <li><a href="./kidsPage.html">דף הבית</a></li>
+                    <li><a href="./kidsPage.html">מי אנחנו </a></li>
+                </ul>
+            </li>
+    
+            <li class="nav__item">
+                <a href=""><h2 class="nav__title">קרדיטים</h2></a>
+            </li>
+    
+            <li class="nav__item">
+                <a href=""><h2 class="nav__title">טל״מ</h2></a>
+            </li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>

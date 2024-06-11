@@ -1,0 +1,2654 @@
+﻿:root{
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'Assistant-Light';
+    src: url('Assistant-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Assistant-Bold';
+    src: url('Assistant-Bold.ttf') format('truetype');
+}
+
+
+/* עיצוב של דף הבית */
+
+body{
+
+font-family: 'Assistant-Light';
+}
+
+
+
+
+/* תפריט ניווט עליון*/
+
+.sidenav {
+    text-align: center;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 17px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: rgb(55, 199, 233);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.btn-mobile {
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+#nav-button {
+    display: none; 
+}
+
+/* nav {
+   
+    box-shadow: 0 1px 32px rgba(163, 224, 255, 0.5); 
+} */
+
+.chosenCat-nav{
+    background: linear-gradient(180deg, #29A7E2, #37C6E9);
+    text-decoration: none;
+    border-radius: 16%;
+    width: 5%;
+}
+
+
+@media screen and (max-width: 600px) {
+    #nav-button {
+        display: block; 
+    }
+
+    .sidenav {
+        display: block; 
+    }
+
+    .flex-container-nav.hide-mobile{
+display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 601px) {
+    .sidenav {
+        display: none; 
+    }
+
+    .flex-container-nav {
+   
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 11%;
+        padding: 2%;
+        justify-content: center;
+    }
+
+    .chosen-cat-nav a {
+        display: block;
+        text-decoration: none;
+        border-bottom: 2px solid rgb(55, 199, 233);
+    }
+
+    .flex-container-nav a {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .flex-container-nav.hide-mobile {
+        display: none;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    #logo-button img {
+        height: 40px;
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+
+
+/* רספונסיביות לדף בית */
+
+@media only screen and (min-width: 600px) {
+
+    :root{
+        font-size: 24px;
+    }
+    p {
+        font-size: 1.5rem;
+        text-align: right;
+    }
+
+    .flex-container-nav{
+
+        flex-direction: row;
+        position: relative;
+    }
+
+
+    .flex-container-nav.hide-mobile{
+
+        display: flex;
+        gap: 10%;
+        padding: 2%;
+    padding-bottom: 1%;
+    /* background-color: #008291; */
+
+
+
+    display: flex;
+    gap: 11%;
+    padding: 0%;
+  
+    }
+
+ 
+
+    .hide{
+
+        display: none;
+
+    }
+
+    .flex-container-nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Horizontally center the content */
+        padding: 1.4%;
+        
+    }
+    
+
+}
+
+
+
+
+
+a{
+    font-family: 'Assistant-Light', sans-serif;
+    text-decoration: none;
+}
+
+
+
+
+h1{
+    font-family: 'Assistant-Bold', sans-serif; /* Apply custom font */
+    font-size: 2.5rem; /* Set initial font size */
+    color: rgb(55, 199, 233);
+    margin-top: 2%; /* Adjust top margin */
+    line-height: 1.6; /* Adjust line height */
+
+    
+}
+
+h2{
+    font-family: 'Assistant-Bold', sans-serif;
+    font-size: 1.75rem; /* Set base font size using relative units */
+    line-height: 1.6; /* Adjust line height */
+    margin-top: 5%; /* Adjust top margin */
+    color: rgb(55, 199, 233);
+}
+
+
+p{
+    font-family: 'Assistant-Light', sans-serif;
+    line-height: 1.6;
+    
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .h2{
+
+    font-size:1rem;
+     }   
+  
+.h1{
+    text-align: center;
+    font-size:1.5rem;
+}
+
+
+
+}
+
+
+
+
+
+
+/* סירטון פתיחה בעמוד בית*/
+.flex-container-opening {
+    padding-top: 6%;
+    padding-bottom: 5%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #EFFBFF;
+   
+}
+
+.flex-container-opening li {
+    width: 34rem;
+    height: 18rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+}
+
+
+@media (max-width: 600px) {
+    .flex-container-opening {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items horizontally */
+        justify-content: center; /* Center align items vertically */
+        padding: 1rem;
+    }
+
+    .flex-container-opening li {
+        width: 100%;
+        height: auto; /* Adjust height for responsive design */
+        margin-bottom: 1rem; /* Ensure spacing between rows */
+        text-align: center; /* Center text on smaller screens */
+        margin-left: 0; /* Reset margin-left */
+    }
+}
+
+
+
+
+
+
+
+   /* הסירטון היכרות אירדוק */
+   .responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+/* קרוסלה של הדמויות*/
+
+
+
+
+.list {
+    display: flex;
+    gap: 48px;
+    padding: 98px;
+    list-style: none;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    background-image: url(/images/Catbg.png); /* Ensure the path is correct */
+    background-size: cover; /* Make sure the background image covers the entire area */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    position: relative; /* Add position relative to allow absolute positioning of buttons */
+}
+
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .item {
+    flex-shrink: 0;
+    height: 60vh;
+    width: 28%;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /* Slightly scale up the item */
+
+}
+
+
+
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: "Assistant-Light";
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+
+
+
+  .list-wrapper {
+    position: relative;
+  }
+  
+  .button {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 4%;
+    width: 3rem;
+    height: 3rem;
+
+  }
+  
+  .button--previous {
+    left: 68.5rem;
+    /* transform: rotate(180deg); */
+  }
+  
+  .button--next {
+    right: 1.5rem;
+  }
+
+
+/* המסך פחות מ-600 */
+@media only screen and (max-width: 600px) {
+    .item {
+        height: 38vh;
+        width: 44vh;
+      
+    }
+
+    .content {
+      font-size: 32px;
+    }
+
+    .button {
+      width: 2rem;
+      height: 2rem;
+    }
+
+
+
+
+    .list{
+        gap: 101px;
+    }
+
+
+ 
+    
+}
+
+
+
+
+
+
+.Icon-image-Kid{
+    transform: translate(51%, 0) scale(0.7);
+    max-width: 100%;
+    height: auto;
+    margin-top: 6%;
+    
+}
+.IconTextKid{
+    cursor: pointer;
+    font-size: 3.75rem;
+    color: azure;
+    background: linear-gradient(180deg, #E8D2FD, #C08BF8,#9455D9, #751DD5 );    border-radius: 15%;
+    border-radius: 15%;
+    margin-right: 36%;
+    padding: 14%;
+    padding-left: 21%;
+}
+
+.IconTextDoc{
+    cursor: pointer;
+    font-size: 3.75rem;
+    color: azure;
+    background: linear-gradient(180deg, #ADE7FF, #64D8FF,#35C0E8, #2980A7 );    border-radius: 15%;
+    margin-right: 76%;
+    padding: 12%;
+    padding-top: 19%;
+}
+
+
+.Icon-image-Doc {
+  
+    transform: translate(48%, 0) scale(0.5);
+    max-width: 100%;
+    height: auto;
+    margin-top: 7%;
+}
+
+.IconTextFly{
+    cursor: pointer;
+    font-size: 3.75rem;
+    color: azure;
+    background: linear-gradient(180deg, #FFCEA3, #F07B14,#BE6210, #914F15 );    border-radius: 15%;
+    border-radius: 15%;
+    margin-right: 72%;
+    padding: 12%;
+    padding-top: 19%;
+    padding-left: 20%;
+}
+
+
+.Icon-image-Fly {
+  
+    transform: translate(48%, 0) scale(0.6);
+    max-width: 100%;
+    height: auto;
+    margin-top: 7%;
+}
+
+
+.IconTextSw{
+    cursor: pointer;
+    font-size: 3.75rem;
+    color: azure;
+    background: linear-gradient(180deg, #84F0FF, #4EBDCB,#268A95, #008291);    border-radius: 15%;
+    border-radius: 15%;
+    margin-right: 28%;
+    padding: 12%;
+    padding-top: 19%;
+    padding-left: 20%;
+}
+
+
+.Icon-image-Sw {
+  
+    transform: translate(48%, 0) scale(1.2);
+    max-width: 100%;
+    height: auto;
+    margin-top: 7%;
+}
+
+
+.IconTextAd{
+    cursor: pointer;
+    font-size: 3.75rem;
+    color: azure;
+    background: linear-gradient(180deg, #E0DCDC, #827A7A,#534949);    
+    border-radius: 15%;
+    margin-right: 35%;
+    padding: 12%;
+    padding-top: 19%;
+}
+
+
+.Icon-image-Ad {
+  
+    transform: translate(52%, 0) scale(1.1);    
+    max-width: 100%;
+    height: auto;
+    margin-top: 7%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .IconTextDoc {
+        font-size: 3.3rem;
+        margin-right: 75%;
+        padding: 14%;
+    }
+
+    .Icon-image-Doc {
+        transform: translate(50%, 0) scale(0.5);
+        margin-top: 5%;
+    }
+
+    .IconTextKid {
+        font-size: 3.3rem;
+    margin-right: 79%;
+    padding: 14%;
+    }
+
+    .Icon-image-Kid {
+        transform: translate(50%, 0) scale(0.4);
+
+        margin-top: 5%; 
+    }
+
+    .IconTextFly {
+    font-size: 3.3rem;
+    margin-right: 65%;
+    padding: 14%;
+    }
+
+    .Icon-image-Fly {
+        transform: translate(50%, 0) scale(0.5);
+
+        margin-top: 5%; 
+    }
+
+
+    .IconTextSw {
+    font-size: 3.3rem;
+    margin-right: 59%;
+    padding: 14%;
+    }
+
+    .Icon-image-Sw {
+        transform: translate(43%, 0) scale(0.7);
+        margin-top: 13%;
+    }
+
+
+
+    .IconTextAd {
+        font-size: 3.3rem;
+        margin-right: 59%;
+        padding: 14%;
+        }
+    
+        .Icon-image-Ad {
+            transform: translate(48%, 0) scale(0.7);
+            margin-top: 13%;
+        }
+    
+.button--previous {
+    left: 17.5rem;
+}
+
+
+}
+
+
+
+
+/* שאלות נפוצות */
+.accordion-button {
+    font-size: 1.5rem;
+}
+.accordion-body {
+    font-size: 1rem;
+    text-align: right;
+}
+.accordion-header {
+    font-size: 1.5rem; 
+}
+
+
+/* למי אסור להשתמש באירדוק?*/
+.flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9%;
+    padding-bottom: 7%;
+}
+  
+.flip-card-container .flip-card {
+    background-color: transparent;
+    width: 317px;
+    height: 338px;
+    perspective: 100;
+    border-radius: 40px;
+    box-shadow: 0 7px 3px rgba(131, 151, 160, 0.5);
+  }
+  
+  .flip-card-inner {
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        border-radius: 40px;
+        box-shadow: 0 7px 3px rgba(131, 151, 160, 0.5);
+    
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    
+    color: black;
+    padding: 17%;
+    font-size: 1.25rem;
+    padding: 13%;
+  }
+  
+  .flip-card-back {
+    background-color: #EFFBFF;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    padding: 8%;
+    border-radius: 40px;
+    box-shadow: 0 7px 3px rgba(131, 151, 160, 0.5);
+  
+  
+  }
+  
+  .flip-card-back p  {
+  font-size: 1rem;
+  
+  
+  }
+
+  .allergies-icon{
+    width: 87%;
+    height: 78%;
+}
+
+
+.emergency-icon{
+    width: 89%;
+    padding: 0%;
+    height: 73%;
+}
+
+
+.surgery-icon{
+    width: 92%;
+    padding: 0%;
+    height: 78%;
+}
+
+.perforation-icon{
+    width: 75%;
+    padding: 7%;
+    height: 76%;
+}
+
+
+
+
+
+
+
+  
+  @media (max-width: 600px) {
+
+    .flip-card-container .flip-card {
+        background-color: transparent;
+        width: 176px;
+        height: 185px;
+        perspective: 100;
+        border-radius: 14px;
+        box-shadow: 0 1px 3px rgba(131, 151, 160, 0.5);
+    
+    }
+
+
+   
+      .flip-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 11px;
+      }
+
+      .flip-card-front {
+        background-color: #EFFBFF; 
+        color: black;
+        padding: 17%;
+        font-size: 1rem;
+        padding: 13%;
+        border-radius: 14px;
+        box-shadow: 0 1px 3px rgba(131, 151, 160, 0.5);
+      }
+
+
+      .allergies-icon{
+        width: 94%;
+        padding: 11%;
+        height: 93%;
+    }
+
+
+    .emergency-icon{
+        width: 83%;
+        padding: 6%;
+        height: 72%;
+    }
+
+
+    .surgery-icon{
+        width: 92%;
+        padding: 0%;
+        height: 78%;
+    }
+
+    .perforation-icon{
+        width: 75%;
+        padding: 7%;
+        height: 76%;
+    }
+
+
+    .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+        padding: 4%;
+        font-size: 0.75rem;
+        border-radius: 14px;
+      
+    }
+
+
+      
+}
+
+
+  
+
+/* במלצות מהעולם */
+
+
+.map-container {
+    position: relative;
+    text-align: center;
+    overflow-x: scroll; /* Add horizontal scrolling if necessary */
+    transform-origin: top left; /* Set transform origin to top left corner */
+    transform: scale(1); /* Initial scale */
+}
+
+.map {
+    width: 1500%; /* Adjust the width as needed */
+    max-width: 1500px; /* Set maximum width for better viewing experience */
+}
+
+.hotspot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Position the hotspots */
+.israel { top: 44%; left: 55%; }
+.uk { top: 34%; left: 46%; }
+.us { top: 40%; left: 25%; }
+.nd { top: 35%; left: 25%; }
+.hawaii { top: 44%;
+    left: 16%; }
+.asia { top: 37%; left: 70%; }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1002; /* Ensure the close button is above the popup content */
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .map-container {
+        overflow: hidden; /* Hide horizontal scrolling on small screens */
+        transform: scale(1);    }
+
+    .map {
+        width: auto; /* Scale map dynamically */
+        max-width: 100%; /* Ensure map doesn't overflow */
+    }
+
+    .hotspot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .israel { top: 44%; left: 55%; }
+    .uk { top: 34%; left: 46%; }
+    .us { top: 40%; left: 25%; }
+    .nd { top: 35%; left: 25%; }
+    .hawaii { top: 42%; left: 4%;}
+    .asia { top: 37%; left: 70%; }
+
+    .popup-content {
+        padding: 10px;
+        max-width: 90%; /* Ensure popup content fits small screens */
+    }
+
+    .close-btn {
+        font-size: 16px; /* Adjust close button size */
+    }
+
+    iframe {
+        height: 300px; /* Adjust iframe height for small screens */
+    }
+}
+
+
+
+
+/* אישור משרד הבריאות האמריקני */
+
+
+  .fda-icon {
+    text-align: center;
+    background-color: #EFFBFF;
+    padding-bottom: 2%;
+}
+
+.fda-icon img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36vh; 
+}
+
+.eardoc-web-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+.text h2,
+.text .button-link {
+    margin: 0; /* Remove default margin */
+}
+
+.web-icon {
+    position: absolute;
+    right: 16%;
+    transform: translateY(-37%);
+}
+
+@media (max-width: 600px){
+    .fda-icon img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 26%;
+    }
+
+    .web-icon {
+        display: block;
+    
+        margin-left: 29px;
+        width: 23%;
+        margin-bottom: 36%;
+    }
+    .button-link button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+
+
+
+
+}
+
+
+/* פוטר */
+
+
+
+
+
+
+
+/* פוטר */
+
+
+
+/* Responsive styles for footer */
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+     
+    }
+   .nav__ul{
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+        column-count: 1;
+    }
+
+    .nav__title {
+        color: #000000;
+    }
+    .footer ul{
+        flex-wrap: nowrap;
+    }
+
+    
+}
+
+
+
+
+/* Further adjust font size for very large screens */
+
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    background: linear-gradient(to bottom, #6DD7F0, #3CC3F2,#118AC3 ); /* Example gradient from left to right */
+
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: black;
+  }
+  
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+
+    padding-right: 0%;
+ 
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: black;
+  }
+  
+  .nav__ul--extra {
+   
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+
+
+ 
+  }
+
+
+
+
+
+/* דפי פרסונות */
+.open-content {
+   text-align: right;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.chosenCat-image{
+
+   
+    max-width: 60%; 
+    height: auto;
+    padding-right: 39%;
+    max-width: 32%;
+}
+
+
+
+.chosen-cat-h1{
+    margin-right: 2%;
+    text-align: right;
+}
+
+.chosen-cat-h2{
+    font-family: 'Assistant-Light';
+    font-size: 1.8em;
+    text-align: right;
+    margin-bottom: 17%;
+    margin-right: 2%;
+}
+
+
+
+
+
+
+/* רספונסיביות של אלמנטים בתוך הפרסונות */
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+    .open-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+
+
+    .open-content h1 {
+        font-size: 2em;  /* Decrease font size of h1 on smaller screens */
+    }
+
+    .open-content h2 {
+        font-size: 1.5em; /* Decrease font size of h2 on smaller screens */
+    }
+}
+
+
+/* דף רופאים */
+.doctors-med-section{
+    padding-top: 10%;
+    /* background-image: url(/images/DocMedBG.png); */
+    background-position-y: 67%;
+    background-size: 101%;
+    background-position-x: 34%;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+.flex-container-opening-doc {
+    padding-top: 6%;
+    padding-bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #EFFBFF;
+    background-image: url(/images/doctorCat-bg.png);
+    background-position-y: 0%;
+    background-size: 61%;
+    background-position-x: -51%;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+
+
+
+.flex-container-opening-doc li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+    
+}
+
+
+.flex-container-doc{
+
+list-style-type: none;
+margin-top: 0%;
+
+   
+}
+
+
+
+.flex-container-main-doc {
+
+    padding-top: 2%;
+    padding-bottom: 5%;
+    display: flex;
+    list-style-type: none;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 3%;
+   
+   
+}
+
+
+
+.doc-med {
+    background-color: white;
+    box-shadow: 0 7px 3px rgba(131, 151, 160, 0.5);
+    display: inline-block;
+    width: calc(33.33% - 10px); /* Adjust width to fit three items in a row */
+    margin-right: 10px; /* Adjust margin between items */
+    border-radius: 42px;
+}
+
+
+
+.panel {
+    display: block;
+   
+}
+
+
+.panel p {
+    display: block;
+    visibility: visible; 
+    display: block;
+    visibility: visible;
+    text-align: center;
+    padding: 5%;
+    font-size: 1.0rem ;
+}
+
+
+.accordion {
+    font-family: 'Assistant-Light';
+    font-size: 2.5rem;
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    transition: 0.4s;
+    padding-bottom: 2%;
+    
+  }
+
+
+  .medCat-image{
+
+    width: 29%;
+    margin-right: 35%;
+    padding: 3%;
+  
+ 
+ }
+
+ .medCat-image-Earpopper{
+    width: 16%;
+    margin-right: 44%;
+    padding-top: 3%;
+ }
+
+
+ .medCat-image-antibiotics{
+    width: 24%;
+    margin-right: 37%;
+    padding-top: 6%;
+ }
+
+
+
+
+@media (max-width: 600px) {
+
+    .doctors-med-section{
+        padding-top: 10%;
+        background-image: url(/images/DocMedBG.png);
+        background-position-y: 49%;
+        background-size: 252%;
+        background-position-x: 34%;
+        background-repeat: no-repeat;
+        padding-bottom: 20%;
+    
+    
+    }
+    .flex-container-opening-doc {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Center align items horizontally */
+        justify-content: center; /* Center align items vertically */
+        padding: 1rem;
+        /* margin-bottom: -151%; */
+    }
+
+
+    .flex-container-opening-doc li {
+        height: 5%;
+    }
+
+    
+ .flex-container-doc li{
+    margin-left: 9%;
+    
+ }
+
+    .chosenCat-image{
+
+       display: none;
+     
+    
+    }
+    .medCat-image{
+        display: none;
+    }
+    .medCat-image-Earpopper{
+        display: none;
+    }
+
+    .medCat-image-antibiotics{
+        display: none;
+    }
+
+    .flex-container-main-doc {
+        display: flex;
+        align-items: center; /* Center align items horizontally */
+        justify-content: center; /* Center align items vertically */
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+
+
+    .panel {
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .doc-med {
+        padding: 3%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align container to the right */
+        justify-content: flex-start; /* Align container content to the top */
+    }
+
+
+
+    .accordion {
+        font-family: 'Assistant-Light';
+        background-color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 1.5rem;
+        transition: 0.4s;
+      }
+      
+      .active, .accordion:hover {
+        background-color: #ccc; 
+      }
+      .panel p{
+        font-size: 0.75rem;
+
+      }
+      
+
+  
+}
+
+
+
+/* מידע לרופא*/
+
+
+
+
+
+.doc-info {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 383px;
+    margin-top: 5%;
+}
+
+.doc-infoicon {
+    
+    position: absolute;
+    left: 91%;
+    transform: translate(-23%, -25%);
+    width: 11%;
+    height: auto;
+}
+
+.info-container h1 {
+    top: 15%;
+    left: 71%;
+    font-size: 2.5rem;
+    position: absolute;
+
+    margin-bottom: 10px;
+    color: white;
+    transform: translateX(25%);
+}
+
+
+.info-container p {
+    position: relative; /* Ensure relative positioning */
+    padding-bottom: 10%;
+    color: white;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 38%;
+    left: 8%;
+    transform: translateX(-5%);
+    /* margin-bottom: 11px; */
+    
+}
+.doc-infoicon-2 {
+    
+    position: absolute;
+    left: 91%;
+    transform: translate(-23%, -125%);
+    width: 11%;
+    height: auto;
+}
+
+.info-container-doc-2 {
+
+
+    position: relative;
+    width: 94%;
+    padding-bottom: 10%;
+    padding-top: 9%;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 42px;
+}
+
+
+.info-container{
+    position: relative;
+    width: 94%;
+    padding-bottom: 10%;
+    padding-top: 9%;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+}
+.doc-info-2 {
+
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 499px;
+    margin-top: -5%;
+}
+
+
+.doc-infoicon-2 {
+    position: absolute;
+    left: 96%;
+    transform: translate(-26%, -83%);
+    width: 7%;
+    height: auto;
+}
+
+
+.info-container-2 h1 {
+    top: 15%;
+    left: 63%;
+    font-size: 2.5rem;
+    position: absolute;
+
+    margin-bottom: 10px;
+    color: white;
+    transform: translateX(25%);
+}
+.info-container-2 h2{
+
+    top: 22%;
+    left: 21%;
+    position: absolute;
+    margin-bottom: 13px;
+    color: white;
+    transform: translateX(-9%);
+}
+
+
+.info-container-2 p {
+    position: relative; /* Ensure relative positioning */
+    padding-bottom: 10%;
+    color: white;
+    font-size: 1.7rem;
+    position: absolute;
+    left: 8%;
+    transform: translateX(-5%);
+    top: 36%;
+}
+
+
+@media (max-width: 600px) {
+
+    .info-container-doc-2{
+        font-size: 0.75rem;
+        padding: 2%;
+        border-radius: 21px;
+    }
+
+    .info-container {
+        position: relative; /* Ensure relative positioning */
+        padding-top: 3%;
+        
+    }
+
+    .info-container h1 {
+       
+        font-size: 1.5rem;
+        position: absolute;
+        top: 18%;
+        left: 44%;
+        transform: translateX(29%);
+        margin-bottom: 10px;
+    }
+
+    .info-container p {
+        padding-bottom: 10%;
+        color: white;
+        font-size: 0.7rem;
+        position: absolute;
+        top: 48%;
+        left: 8%;
+        transform: translateX(-5%);
+    }
+
+
+
+    .doc-info {
+     
+        width: 100%;
+    height: 126px;
+       
+    }
+
+    .doc-infoicon {
+        position: absolute;
+        left: 88%;
+        transform: translate(-44%, -54%);
+        width: 68px;
+        height: auto;
+    }
+    .info-container-2 h1 {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 13%;
+        left: 23%;
+        transform: translateX(38%);
+        margin-bottom: 10px;
+    }
+   
+
+    .info-container-2 p{
+        padding-bottom: 10%;
+        color: white;
+        font-size: 0.7rem;
+        position: absolute;
+        top: 38%;
+    }
+  
+    .doc-info-2 {
+        width: 100%;
+        height: 146px;
+       
+    }
+
+    .doc-infoicon-2 {
+        position: absolute;
+    left: 94%;
+    transform: translate(-44%, -58%);
+    width: 48px;
+    height: auto;
+    }
+
+
+    .accordion{
+        font-size: 1rem;
+    }
+
+}
+
+
+
+/* spline */
+/* מבנה האוזן */
+
+
+.viewer-container-earanatomy {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 14%;
+    /* background-color: #EFFBFF; */
+    padding-top: 10%;
+    background-image: url(/images/reserch-bg-2.png);
+    background-position-y: 26%;
+    background-size: 116%;
+    background-position-x: 47%;
+    background-repeat: no-repeat;
+
+}
+
+.viewer-container-earanatomy p {
+    margin-bottom: 10px; /* Adjust space between <p> and <canvas> */
+    text-align: center;
+    padding-bottom: 7%;
+}
+
+#canvas3d-2 {
+    width: 105% !important; /* Adjust width to make the canvas larger */
+    height: 80% !important; /* Adjust height to make the canvas larger */
+}
+
+
+
+
+@media (max-width: 600px) {
+    .viewer-container-earanatomy h2{
+        font-size: 1rem;
+    }
+    .viewer-container-earanatomy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 14%;
+        padding-top: 10%;
+        background-image: url(/images/reserch-bg-2.png);
+        background-position-y: 61%;
+        background-size: 169%;
+        background-position-x: 47%;
+        background-repeat: no-repeat;
+    
+    }
+
+
+}
+
+
+
+/* תכירו את האירדוק */
+
+.viewer-container {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    padding-bottom: 11%;
+
+   
+}
+
+.viewer-container h2 {
+    margin-bottom: 10px; /* Adjust space between <h2> and <p> */
+    text-align: center;
+}
+
+.viewer-container p {
+    margin-bottom: 10px; /* Adjust space between <p> and <canvas> */
+    text-align: center;
+}
+
+#canvas3d {
+    width: 80% !important; /* Adjust width to make the canvas larger */
+    height: 80% !important; /* Adjust height to make the canvas larger */
+}
+/* אינטרקציה מרכזית */
+
+.viewer-container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.viewer-container-main h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.75rem; 
+    color: white;
+    
+}
+
+#canvas3d-3 {
+    width: 80% !important; 
+    height: 80% !important; 
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .viewer-container-main h2 {
+        font-size: 1.25rem; 
+    }
+}
+
+#canvas3d-main {
+    width: 100% !important; 
+    height: 80% !important; 
+}
+
+
+/*  מחקרים */
+
+
+
+.flex-container-opening-doc-research {
+    
+    padding-bottom: 5%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+  
+    background-image: url(/images/researchBT.png);
+    background-position-y: 61%;
+    background-size: 169%;
+    background-position-x: 47%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.flex-container-opening-doc-research li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+}
+
+
+
+
+
+.button-link button {
+    background: linear-gradient(180deg, #ADE7FF, #64D8FF, #35C0E8, #2980A7);
+    border-radius: 15%;
+    border: none;
+    color: white;
+    padding: 24px 57px;
+    left: 4%;
+    /* margin-left: 5%; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link button:hover {
+    background-color: #0e498c; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+
+
+
+.research-image-bg {
+    display: flex;
+    gap: 48px;
+    padding: 62px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+   
+    background-size: cover; /* Make sure the background image covers the entire area */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    position: relative; /* Add position relative to allow absolute positioning of buttons */
+    
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+.research-image{
+    width: 94%;
+   
+}
+
+
+.flex-container-opening-doc-research {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    /* margin-bottom: -151%; */
+    /* height: 200px; */
+      
+    background-image: url(/images/reserch-bg-2.png);
+    background-position-y: -71%;
+    background-size: 110%;
+    background-position-x: 96%;
+    background-repeat: no-repeat;
+}
+
+.flex-container-opening-doc-research p {
+    background-image: url(/images/reserch-bg-2.png);
+    background-position-y: -71%;
+    background-size: 110%;
+    background-position-x: 96%;
+    background-repeat: no-repeat;
+    
+}
+
+.flex-container-opening-doc-research li {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    height: auto;
+ 
+    
+}
+
+
+.button-link button {
+  
+    background: linear-gradient(180deg, #c2edff, #64D8FF, #35C0E8, #2980A7);
+    border-radius: 15%;
+    border: none;
+    color: white;
+    padding: 9px 28px;
+    left: 4%;
+    /* margin-left: 5%; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link button:hover {
+    background-color: #0e498c; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+
+.flex-container-opening-doc-research li:nth-child(1) {
+    order: 1;
+  }
+
+  .flex-container-opening-doc-research li:nth-child(2) {
+    order: 2;
+  }
+
+  .flex-container-opening-doc-research li:nth-child(3) {
+    order: 3;
+  }
+
+  .flex-container-opening-doc-research li:nth-child(4) {
+    order: 4;
+  }
+
+  .flex-container-opening-doc-research li:nth-child(5) {
+    order: 5;
+  }
+}
+
+
+
+/* עמוד ילדים */
+.chosenCat-image-kids{
+    max-width: 60%; 
+    height: auto;
+    padding-right: 39%;
+    max-width: 32%;
+}
+.flex-container-opening-kids h1{
+color: #751DD5;
+  
+   
+}
+
+
+.flex-container-opening-kids {
+
+    padding-bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #F6EBFF;
+    background-image: url(/images/kidCat-bg.png);
+    background-position-y: 0%;
+    background-size: 61%;
+    background-position-x: -51%;
+    background-repeat: no-repeat;
+  
+   
+}
+
+
+.flex-container-opening-kids li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+
+    
+}
+
+
+
+
+
+
+
+.kids-opening-section h2, .kids-forparents-section h2{
+color: #751DD5;
+
+}
+
+.kids-opening-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: -6px;
+    /* margin: -65px; */
+    list-style: none;
+    
+    gap: 0%;
+    width: 53%;
+}
+
+.kids-opening-section li , .kids-forparents-section li{
+    flex: 1 1 30%; /* Adjust the percentage as needed */
+    margin: 10px;
+}
+
+.kids-opening-section h2 , .kids-forparents-section h2{
+    margin: 0;
+}
+
+.kids-opening-section p, .kids-forparents-section p {
+    margin: 5px 0 0 0;
+}
+
+.kids-info-icon {
+    width: 36%;
+    position: absolute;
+    top: 100%;
+    left: -44px;
+}
+
+
+
+.kids-icon-bg{
+    width: 160%;
+    position: relative;
+    left: 33%;
+    top: -6%;
+}
+
+
+.kids-icon-eardoc-bg{
+    position: absolute;
+    top: 361%;
+    right: 82%;
+    transform: translateY(-50%);
+  
+}
+
+.viewer-container-kids-intro, .viewer-container-main-kids{
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0%;
+    background-color: #F6EBFF;
+    padding-top: 0%;
+    background-position-y: 26%;
+    background-size: 116%;
+    background-position-x: 47%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.kids-forparents-section{
+
+    background-image: url(/images/kids-bg.png);
+    background-size: 79%;
+    padding: 11%;
+    background-position-x: -44%;
+    background-repeat: no-repeat;
+    padding-top: 19%;
+}
+
+.kids-forparents-section ul , .traveler-opening-section ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: -6px;
+    list-style: none;
+    width: 87%;
+}
+
+#canvas3d-4 {
+    width: 80% !important; 
+    height: 80% !important; 
+}
+
+#canvas3d-5{
+    width: 80% !important; 
+    height: 80% !important; 
+    
+}
+
+
+
+
+@media (max-width: 600px) {
+    .kids-opening-section h2 {
+       color: #751DD5;
+    }
+    .kids-opening-section{
+        background-color: #F6EBFF;
+        border-radius: 8%;
+        background-position-y: -3%;
+        background-size: 99%;
+       
+        background-repeat: no-repeat;
+
+
+        padding-top: 3%;
+    padding-bottom: 1%;
+    
+    
+    }
+
+    .kids-opening-section ul {
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .kids-opening-section li {
+        margin-left: 11%;
+        
+        
+    }
+
+
+
+    
+.flex-container-opening-kids{
+    padding-top: 6%;
+    padding-bottom: 5%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+ 
+    padding: 1%;
+   
+}
+.flex-container-opening-kids li{
+    height: 11rem;
+}
+
+
+
+
+    .kids-info-icon {
+        width: 43%;
+        position: absolute;
+        top: 92%;
+        left: -6px;
+    
+    }
+
+    .kids-icon-eardoc-bg {
+        position: absolute;
+
+        transform: translateY(-54%);
+
+        top: 285%;
+    right: 79%;
+    width: 22%;
+    }
+
+    .kids-icon-bg {
+ 
+        position: relative;
+        top: 14%;
+        left: -36%;
+        width: 132%;
+    }
+
+    .kids-forparents-section{
+     background-image: url(/images/kids-bg.png);
+    background-size:95%;
+    padding: 0%;
+    background-position-x: -188%;
+    background-repeat: no-repeat;
+    padding-top: 4%;
+    }
+
+
+    .kids-forparents-section li{
+   
+        margin: 17px;
+    }
+
+    
+    .kids-forparents-section ul{
+        width: 104%;
+        margin-right: -32%;
+        margin-top: 8%;
+}
+
+.kids-forparents-section p{
+        font-size: 0.7rem;
+}
+
+
+}
+
+
+
+
+
+/* לטסים מתמידים    */
+
+
+
+.flighters-opening-section{
+    padding-top: 5%;
+margin: 3%;
+
+}
+
+
+.flighters-opening-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: -6px;
+    /* margin: -65px; */
+    list-style: none;
+    width: 100%;
+    gap: 0%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+
+
+
+.flex-container-opening-flighters {
+
+    padding-bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #FFF4EA;
+    background-image: url(/images/flightersCat-bg.png);
+    background-position-y: 0%;
+    background-size: 61%;
+    background-position-x: -51%;
+    background-repeat: no-repeat;
+  
+   
+}
+
+
+.flex-container-opening-flighters li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+
+    
+}
+
+
+
+.traveler-opening-section{
+    background-image: url(/images/travel-infp-bg.png);
+    background-position-y: 37%;
+    background-size: 111%;
+    padding: 7%;
+    background-position-x: -2%;
+    background-repeat: no-repeat;
+
+
+}
+.traveler-opening-section ul{
+
+    background-color: white;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      padding: 2%;
+      margin: -2%;
+    
+
+}
+
+
+@media (max-width: 600px) {
+    .flex-container-opening-flighters li{
+        height: 5rem;
+    }
+    .flighters-opening-section-icon{
+        width: 76%;
+
+    }
+
+.flighters-opening-section ul{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: -6px;
+    /* margin: -65px; */
+    list-style: none;
+    width: 88%;
+    gap: 0%;
+    flex-direction: column
+}
+.flighters-opening-section h2 {
+    color: #751DD5;
+ }
+ .flighters-opening-section{
+
+     border-radius: 8%;
+     background-position-y: -3%;
+     background-size: 99%;
+     background-repeat: no-repeat;
+     padding-top: 3%;
+ padding-bottom: 1%;
+ 
+ 
+ }
+
+ .traveler-opening-section ul {
+     flex-direction: column;
+     padding: 1%;
+ }
+
+ .traveler-opening-section li {
+     margin-left: 11%;
+     
+     
+     
+ }
+
+}
+
+
+ 
+
+#canvas3d-7 {
+    width: 80% !important; /* Adjust width to make the canvas larger */
+    height: 80% !important; /* Adjust height to make the canvas larger */
+}
+/* אינטרקציה מרכזית */
+
+
+.viewer-container-Flighters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+
+/*  שחיינים */
+.flex-container-opening-swim{
+
+    padding-bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #C0EFF5;
+    background-image: url(/images/swimmersCat.png);
+    background-position-y: 0%;
+    background-size: 61%;
+    background-position-x: -51%;
+    background-repeat: no-repeat;
+  
+   
+}
+
+
+.flex-container-opening-swim li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+
+    
+}
+
+
+
+
+
+
+.flex-container-opening-swimmers li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+}
+
+
+@media (max-width: 600px) {
+    .flex-container-opening-swim li {
+        width: 37rem;
+        height: 12rem;}
+
+
+    .flex-container-opening-swimmers {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .flex-container-opening-swimmers li {
+        flex: 1 1 100%;
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: flex-start;
+        width: 23rem;
+        
+    }
+ 
+
+    .swimmers-image {
+        width: 97%;
+        height: auto;
+        margin-right: 10px; /* Add some space between the image and text */
+    }
+
+    .flex-container-opening-swimmers p {
+        flex: 1;
+       text-align: right;
+    }
+
+
+    .flex-container-opening-swimmers li:nth-child(4) {
+        order: 1;
+    }
+
+    .flex-container-opening-swimmers li:nth-child(3) {
+        order: 2;
+    }
+}
+
+#canvas3d-8 {
+    width: 80% !important; /* Adjust width to make the canvas larger */
+    height: 80% !important; /* Adjust height to make the canvas larger */
+}
+/* אינטרקציה מרכזית */
+
+.viewer-container-swimmers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+
+
+/*  מבוגרים */
+
+
+.flex-container-opening-adults{
+
+    padding-bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjust gap as needed */
+    flex-direction: row;
+    padding-left: 0;
+    background-color: #DBE0E9;
+    background-image: url(/images/adultCat-bg.png);
+    background-position-y: 0%;
+    background-size: 61%;
+    background-position-x: -51%;
+    background-repeat: no-repeat;
+  
+   
+}
+
+
+.flex-container-opening-adults li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Ensure spacing between rows */
+
+    
+}
+
+
+/*  */
+
+
+
+.flex-container-opening-adults li {
+    width: 37rem;
+    height: 26rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; 
+}
+
+
+
+
+/* .iframe-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 14%;
+}
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; 
+  }
+ 
+  @media (max-width: 600px) {
+    .iframe-container {
+      padding-top: 75%; 
+    }
+    
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+    }
+  } */
+
+
+
+/*  */
+  /* Media Query for smaller screens */
+/* Container for the Spline viewer */
+/* Container for the Spline viewer */
+.viewer-container-earanatomy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Spline viewer */
+/* Container for the Spline viewer */
+.viewer-container-earanatomy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Spline viewer */
+#spline1 {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 800px !important; /* Adjust as needed */
+    /* Adjust as needed */
+    display: block !important; /* Ensure the canvas is displayed as a block element */
+}
+
+#spline2 {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 00px !important; /* Adjust as needed */
+    /* Adjust as needed */
+    display: block !important; /* Ensure the canvas is displayed as a block element */
+}
